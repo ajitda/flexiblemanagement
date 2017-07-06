@@ -87,7 +87,7 @@ class ReportController extends Controller
     {
         if($request->ajax()){
             $reportsummarys = Report::whereBetween('created_at', [ $request->DateCreated.' 00:00:00', $request->EndDate.' 23:59:59'])->get();
-            return view('reports.summary')->with('reportsummarys', $reportsummarys);
+            return view('reports.summary')->with('reportsummarys', $reportsummarys)->with('request', $request);
         }
     }
 
@@ -98,7 +98,7 @@ class ReportController extends Controller
     {
         if($request->ajax()){
             $reportsummarys = BirdReport::whereBetween('created_at', [ $request->DateCreated.' 00:00:00', $request->EndDate.' 23:59:59'])->get();
-            return view('reports.summary')->with('reportsummarys', $reportsummarys);
+            return view('reports.birdreportsummary')->with('reportsummarys', $reportsummarys)->with('request', $request);
         }
     }
 }

@@ -64,6 +64,7 @@
                                     {{--</td>--}}
                                 </tr>
                             @endforeach
+
                             </tbody>
                         </table>
                         {{--<div class="paginatios col-lg-12">--}}

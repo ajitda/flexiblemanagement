@@ -40,6 +40,19 @@
             {{--</td>--}}
         </tr>
     @endforeach
+        <tr>
+            <td>Total</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('total_purchase')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('total_expense')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('total_less')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('total_cost')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('total_sale')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('cheque_sale_others')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('cash_sale')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('collection')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('balance')}}</td>
+            <td>{{DB::table('reports')->whereBetween('created_at', [$request->DateCreated.' 00.00.00', $request->EndDate.' 23.59.59'])->sum('profit')}}</td>
+        </tr>
     </tbody>
         @endif
 </table>
