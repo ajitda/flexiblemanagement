@@ -26,9 +26,7 @@
                                     </li>
                                 </ul>
                             </div>
-
                         </div>
-
                     </div>
                     <div class="panel-body">
                         @if (Session::has('message'))
@@ -91,25 +89,22 @@
                                     @endif
                             </tr>
                             </thead>
-
                             <tbody>
                             @foreach($sales as $sale)
                                 <tr>
                                     <td>{{$sale->id}}</td>
-                                    <td>{{$sale->created_at}}</td>
-                                    <td>{{$sale->updated_at}}</td>
+                                    <td>{{$sale->created_at->format('Y-m-d')}}</td>
+                                    <td>{{$sale->updated_at->format('Y-m-d')}}</td>
                                     <td class="hidden-print">{{$sale->supplier->supplier_name}}</td>
                                     <td>{{$sale->qty}}</td>
                                     <td>{{$sale->weight}}</td>
                                     <td>{{$sale->price_per_kg}}</td>
                                     <td>{{$sale->sub_total}}</td>
                                     <td>{{$sale->death_qty}}</td>
-
                                     <td>{{$sale->total}}</td>
                                     <td>{{$sale->less}}</td>
                                     <td>{{$sale->payment}}</td>
                                     <td>{{$sale->dues}}</td>
-
                                     <td class="hidden-print">
                                         <a href="../sales/{{$sale->id}}/edit"><span class="glyphicon glyphicon-edit"></span></a>
                                     </td>
@@ -123,7 +118,6 @@
                                 </tr>
                             @endforeach
                             </tbody>
-
                         </table>
                         @endif
                         </div>

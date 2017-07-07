@@ -23,7 +23,7 @@
 
                     <div class="row">
                         <div class="col-md-12" id="daily-report">
-                            <h4 class="text-center"> Date : {{\Carbon\Carbon::today()}}</h4>
+                            <h4 class="text-center"> Date : {{\Carbon\Carbon::today()->format('Y-m-d')}}</h4>
                             <table class="table table-bordered table-striped table-hover">
                                 <thead>
                                 <tr>

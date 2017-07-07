@@ -37,7 +37,7 @@
                 <div class="clearfix"></div>
                 <div class="form-group col-md-2">
                     <label for="sub_total">Subtotal : </label>
-                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg - (death_qty* weight * price_per_kg) | currency"></span></div>
+                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg | currency"></span></div>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="transport"> Transport Cost (Tk.) : </label>
@@ -54,7 +54,7 @@
                 <div class="clearfix"></div>
                 <div class="form-group col-md-2">
                     <label for="total">Total : </label>
-                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg - (death_qty* weight * price_per_kg)+cost() | currency"></span></div>
+                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg +cost() | currency"></span></div>
                 </div>
                 <div class="form-group col-md-2">
                     <label for="less">Less (Tk.) : </label>
@@ -66,7 +66,7 @@
                 </div>
                 <div class="form-group col-md-2">
                     <label for="total">Dues : </label>
-                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg - (death_qty* weight * price_per_kg)+cost()- payment - less | currency"></span></div>
+                    <div class="sub_total_text"><span data-ng-bind="tweight * price_per_kg +cost()- payment - less | currency"></span></div>
                 </div>
                 <div class="clearfix"></div>
                 <div class="col-md-2 form-group">

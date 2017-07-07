@@ -66,7 +66,7 @@ class SaleController extends Controller
         $sales->sub_total = $sub_total;
         $death= $sales->death_qty = $request->death_qty;
         $less = $sales->less = $request->less;
-        $total = $sub_total - ($death * $weight * $price_per_kg);
+        $total = $sub_total;
         $sales->total = $total;
         $payment = $sales->payment = $request->payment;
         $sales->payment_type = $request->payment_type;
@@ -130,7 +130,7 @@ class SaleController extends Controller
         $sales->sub_total = $sub_total;
         $death= $sales->death_qty = $request->death_qty;
         $less = $sales->less = $request->less;
-        $total = $sub_total - ($death * $weight * $price_per_kg);
+        $total = $sub_total;
         $sales->total = $total;
         $payment = $sales->payment = $request->payment;
 

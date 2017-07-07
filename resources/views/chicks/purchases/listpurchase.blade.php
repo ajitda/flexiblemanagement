@@ -2,6 +2,7 @@
     <thead>
     <tr>
         <th>ID</th>
+        <th>Created at</th>
         <th>Suppliers</th>
         <th>Qty</th>
         <th>Unit Price</th>
@@ -22,6 +23,7 @@
     @foreach($purchases as $purchase)
         <tr>
             <td>{{$purchase->id}}</td>
+            <td>{{$purchase->created_at->format('Y-m-d')}}</td>
             <td>{{$purchase->chick_supplier->supplier_name}}</td>
             <td>{{$purchase->qty}}</td>
             <td>{{$purchase->unit_price}}</td>

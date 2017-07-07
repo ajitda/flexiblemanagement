@@ -36,6 +36,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Created at</th>
                                     <th>Customers</th>
                                     <th>Suppliers</th>
                                     <th>Qty</th>
@@ -59,6 +60,7 @@
                             @foreach($sales as $sale)
                                 <tr>
                                     <td>{{$sale->id}}</td>
+                                    <td>{{$sale->created_at->format('Y-m-d')}}</td>
                                     <td><a href="customers/{{$sale->customer->id}}">{{$sale->customer->name}}</a></td>
                                     <td>{{$sale->supplier->supplier_name}}</td>
                                     <td>{{$sale->qty}}</td>

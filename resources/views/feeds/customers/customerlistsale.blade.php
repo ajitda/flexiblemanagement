@@ -3,6 +3,7 @@
     <tr>
         <th>ID</th>
         <th>Created at</th>
+        <th>Updated at</th>
         <th>Suppliers</th>
         <th>Qty</th>
         <th>Weight</th>
@@ -25,7 +26,8 @@
     @foreach($sales as $sale)
         <tr>
             <td>{{$sale->id}}</td>
-            <td>{{$sale->created_at}}</td>
+            <td>{{$sale->created_at->format('Y-m-d')}}</td>
+            <td>{{$sale->updated_at->format('Y-m-d')}}</td>
             <td>{{$sale->feed_supplier->supplier_name}}</td>
             <td>{{$sale->qty}}</td>
             <td>{{$sale->weight}}</td>

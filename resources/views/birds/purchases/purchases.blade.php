@@ -36,6 +36,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Created at</th>
                                     <th>Suppliers</th>
                                     <th>Qty</th>
                                     <th>Weight</th>
@@ -46,8 +47,8 @@
                                     <th>Transport</th>
                                     <th>Daily Stuff</th>
                                     <th>Others</th>
-                                    <th>Less</th>
                                     <th>Total</th>
+                                    <th>Less</th>
                                     <th>Payment</th>
                                     <th>Dues</th>
                                     @if($user=='admin')
@@ -61,6 +62,7 @@
                             @foreach($purchases as $purchase)
                                 <tr>
                                     <td>{{$purchase->id}}</td>
+                                    <td>{{$purchase->created_at->format('Y-m-d')}}</td>
                                     <td>{{$purchase->supplier->supplier_name}}</td>
                                     <td>{{$purchase->qty}}</td>
                                     <td>{{$purchase->weight}}</td>
@@ -71,8 +73,8 @@
                                     <td>{{$purchase->transport}}</td>
                                     <td>{{$purchase->daily_stuff_salary}}</td>
                                     <td>{{$purchase->others}}</td>
-                                    <td>{{$purchase->less}}</td>
                                     <td>{{$purchase->total}}</td>
+                                    <td>{{$purchase->less}}</td>
                                     <td>{{$purchase->payment}}</td>
                                     <td>{{$purchase->dues}}</td>
 

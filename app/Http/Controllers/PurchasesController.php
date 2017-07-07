@@ -14,7 +14,6 @@ class PurchasesController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -67,7 +66,7 @@ class PurchasesController extends Controller
         $tweight = $purchases->tweight = $request->tweight;
         $price_per_kg = $purchases->price_per_kg = $request->price_per_kg;
         $death= $purchases->death_qty = $request->death_qty;
-        $sub_total= $tweight * $price_per_kg - ($death * $weight * $price_per_kg);
+        $sub_total= $tweight * $price_per_kg;
         $purchases->sub_total = $sub_total;
         $transport = $purchases->transport = $request->transport;
         $daily_stuff = $purchases->daily_stuff_salary = $request->daily_stuff_salary;
@@ -123,7 +122,7 @@ class PurchasesController extends Controller
         $tweight = $purchases->tweight = $request->tweight;
         $price_per_kg = $purchases->price_per_kg = $request->price_per_kg;
         $death = $purchases->death_qty = $request->death_qty;
-        $sub_total= $tweight * $price_per_kg - ($death * $weight * $price_per_kg);
+        $sub_total= $tweight * $price_per_kg ;
         $purchases->sub_total = $sub_total;
         $transport = $purchases->transport = $request->transport;
         $daily_stuff = $purchases->daily_stuff_salary = $request->daily_stuff_salary;

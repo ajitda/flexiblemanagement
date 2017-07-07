@@ -42,7 +42,7 @@
                             <tbody>
                             @foreach($reportsummarys as $reportsummary)
                                 <tr>
-                                    <td>{{$reportsummary->created_at}}</td>
+                                    <td>{{$reportsummary->created_at->format('Y-m-d')}}</td>
                                     <td>{{$reportsummary->total_purchase }}</td>
                                     <td>{{$reportsummary->total_expense}}</td>
                                     <td>{{$reportsummary->total_less }}</td>
