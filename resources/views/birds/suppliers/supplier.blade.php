@@ -56,8 +56,8 @@
                             @foreach($supplier->purchase as $purchase)
                                 <tr>
                                     <td>{{$purchase->id}}</td>
-                                    <td>{{$purchase->created_at->format('Y-m-d')}}</td>
-                                    <td>{{$purchase->updated_at->format('Y-m-d')}}</td>
+                                    <td>{{$purchase->created_at->format('d-m-Y')}}</td>
+                                    <td>{{$purchase->updated_at->format('d-m-Y')}}</td>
                                     <td>{{$purchase->qty}}</td>
                                     <td>{{$purchase->weight}}</td>
                                     <td>{{$purchase->price_per_kg}}</td>

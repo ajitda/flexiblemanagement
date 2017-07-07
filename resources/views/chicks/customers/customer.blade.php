@@ -94,8 +94,8 @@
                                 @foreach($sales as $sale)
                                     <tr>
                                         <td>{{$sale->id}}</td>
-                                        <td>{{$sale->created_at->format('Y-m-d')}}</td>
-                                        <td>{{$sale->updated_at->format('Y-m-d')}}</td>
+                                        <td>{{$sale->created_at->format('d-m-Y')}}</td>
+                                        <td>{{$sale->updated_at->format('d-m-Y')}}</td>
                                         <td class="hidden-print">{{$sale->chick_supplier->supplier_name}}</td>
                                         <td>{{$sale->qty}}</td>
                                         <td>{{$sale->unit_price}}</td>

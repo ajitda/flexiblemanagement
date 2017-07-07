@@ -62,7 +62,7 @@
                             @foreach($purchases as $purchase)
                                 <tr>
                                     <td>{{$purchase->id}}</td>
-                                    <td>{{$purchase->created_at->format('Y-m-d')}}</td>
+                                    <td>{{$purchase->created_at->format('d-m-Y')}}</td>
                                     <td>{{$purchase->supplier->supplier_name}}</td>
                                     <td>{{$purchase->qty}}</td>
                                     <td>{{$purchase->weight}}</td>

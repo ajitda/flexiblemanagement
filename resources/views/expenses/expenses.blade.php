@@ -17,6 +17,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Created At</th>
                                     <th>Category</th>
                                     <th>Description</th>
                                     <th>Qty</th>
@@ -34,6 +35,7 @@
                             @foreach($expenses as $expense)
                                 <tr>
                                     <td>{{$expense->id}}</td>
+                                    <td>{{$expense->created_at->format('d-m-Y')}}</td>
                                     <td>{{$expense->expense_category->name }}</td>
                                     <td>{{$expense->description}}</td>
                                     <td>{{$expense->qty }}</td>

@@ -25,7 +25,7 @@
     @foreach($sales as $sale)
         <tr>
             <td>{{$sale->id}}</td>
-            <td>{{$sale->created_at->format('Y-m-d')}}</td>
+            <td>{{$sale->created_at->format('d-m-Y')}}</td>
             <td>{{$sale->chick_customer->name}}</td>
             <td>{{$sale->chick_supplier->supplier_name}}</td>
             <td>{{$sale->qty}}</td>

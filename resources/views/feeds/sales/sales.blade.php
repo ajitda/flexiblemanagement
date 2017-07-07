@@ -36,6 +36,7 @@
                             <thead>
                                 <tr>
                                     <th>ID</th>
+                                    <th>Created At</th>
                                     <th>Customers</th>
                                     <th>Suppliers</th>
                                     <th>Qty</th>
@@ -57,6 +58,7 @@
                             @foreach($sales as $sale)
                                 <tr>
                                     <td>{{$sale->id}}</td>
+                                    <td>{{$sale->created_at->format('d-m-Y')}}</td>
                                     <td>{{$sale->feed_customer->name}}</td>
                                     <td>{{$sale->feed_supplier->supplier_name}}</td>
                                     <td>{{$sale->qty}}</td>

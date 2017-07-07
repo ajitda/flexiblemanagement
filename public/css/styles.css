@@ -52,6 +52,9 @@ table tr td, table tr th{
     margin-top:30px;
 }
 .main-sidebar {
+    min-height: 65.7rem;
+}
+.navbar-nav.sidebar{
     background-color: rgba(0, 0, 0, 0.3);
     min-height: 65.7rem;
 }

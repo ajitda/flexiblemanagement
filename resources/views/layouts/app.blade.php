@@ -73,64 +73,66 @@
         </nav>
         <div class="container-fluid">
             <div class="row">
+
                 <div class="col-lg-2 col-md-2 col-sm-2 main-sidebar hidden-print">
-                    <ul class="nav navbar-nav">
-                        @if (Auth::check())
-                            <li><a href="{{url('/home')}}"><strong>Dashboard</strong></a></li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseSix">Employees <span class="caret pull-right"></span></a>
-                                <ul id="collapseSix" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/employees')}}">All Employees</a></li>
-                                </ul>
-                            </li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">Birds <span class="caret pull-right"></span></a>
-                                <ul id="collapseOne" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/birds')}}">Birds Summary</a></li>
-                                    <li><a href="{{url('/suppliers')}}">Suppliers</a></li>
-                                    <li><a href="{{url('/customers')}}">Customers</a></li>
-                                    <li><a href="{{url('/purchases')}}">Purchases</a></li>
-                                    <li><a href="{{url('/sales')}}">Sales</a></li>
-                                </ul>
-                            </li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree">Chicks <span class="caret pull-right"></span></a>
-                                <ul id="collapseThree" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/chicks')}}">Chicks Summary</a></li>
-                                    <li><a href="{{url('/chicksuppliers')}}">Suppliers</a></li>
-                                    <li><a href="{{url('/chickcustomers')}}">Customers</a></li>
-                                    <li><a href="{{url('/chickpurchases')}}">Purchases</a></li>
-                                    <li><a href="{{url('/chicksales')}}">Sales</a></li>
-                                </ul>
-                            </li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseFour">Feeds <span class="caret pull-right"></span></a>
-                                <ul id="collapseFour" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/feeds')}}">Feeds Summary</a></li>
-                                    <li><a href="{{url('/feedsuppliers')}}">Suppliers</a></li>
-                                    <li><a href="{{url('/feedcustomers')}}">Customers</a></li>
-                                    <li><a href="{{url('/feedpurchases')}}">Purchases</a></li>
-                                    <li><a href="{{url('/feedsales')}}">Sales</a></li>
-                                </ul>
-                            </li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapsetwo">Expense<span class="caret pull-right"></span></a>
-                                <ul id="collapsetwo" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/expenses')}}">{{trans('dashboard.expenses')}}</a></li>
-                                    <li><a href="{{url('/expensecategory')}}">Categories</a></li>
-                                </ul>
-                            </li>
-                            <li class="accordion-heading"  >
-                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseFive">Report<span class="caret pull-right"></span></a>
-                                <ul id="collapseFive" class="collapsed_menu accordion-body collapse">
-                                    <li><a href="{{url('/dailyreport')}}">Daily Report</a></li>
-                                    <li><a href="{{url('/birdreports')}}">Birds Summary</a></li>
-                                    <li><a href="{{url('/reportsummary')}}">Total Summary</a></li>
-                                </ul>
-                            </li>
-                        @endif
+                    @if (Auth::check())
+                    <ul class="nav navbar-nav sidebar">
+                        <li><a href="{{url('/home')}}"><strong>Dashboard</strong></a></li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseSix">Employees <span class="caret pull-right"></span></a>
+                            <ul id="collapseSix" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/employees')}}">All Employees</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne">Birds <span class="caret pull-right"></span></a>
+                            <ul id="collapseOne" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/birds')}}">Birds Summary</a></li>
+                                <li><a href="{{url('/suppliers')}}">Suppliers</a></li>
+                                <li><a href="{{url('/customers')}}">Customers</a></li>
+                                <li><a href="{{url('/purchases')}}">Purchases</a></li>
+                                <li><a href="{{url('/sales')}}">Sales</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree">Chicks <span class="caret pull-right"></span></a>
+                            <ul id="collapseThree" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/chicks')}}">Chicks Summary</a></li>
+                                <li><a href="{{url('/chicksuppliers')}}">Suppliers</a></li>
+                                <li><a href="{{url('/chickcustomers')}}">Customers</a></li>
+                                <li><a href="{{url('/chickpurchases')}}">Purchases</a></li>
+                                <li><a href="{{url('/chicksales')}}">Sales</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseFour">Feeds <span class="caret pull-right"></span></a>
+                            <ul id="collapseFour" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/feeds')}}">Feeds Summary</a></li>
+                                <li><a href="{{url('/feedsuppliers')}}">Suppliers</a></li>
+                                <li><a href="{{url('/feedcustomers')}}">Customers</a></li>
+                                <li><a href="{{url('/feedpurchases')}}">Purchases</a></li>
+                                <li><a href="{{url('/feedsales')}}">Sales</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapsetwo">Expense<span class="caret pull-right"></span></a>
+                            <ul id="collapsetwo" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/expenses')}}">{{trans('dashboard.expenses')}}</a></li>
+                                <li><a href="{{url('/expensecategory')}}">Categories</a></li>
+                            </ul>
+                        </li>
+                        <li class="accordion-heading"  >
+                            <a class="accordion-toggle" data-toggle="collapse" href="#collapseFive">Report<span class="caret pull-right"></span></a>
+                            <ul id="collapseFive" class="collapsed_menu accordion-body collapse">
+                                <li><a href="{{url('/dailyreport')}}">Daily Report</a></li>
+                                <li><a href="{{url('/birdreports')}}">Birds Summary</a></li>
+                                <li><a href="{{url('/reportsummary')}}">Total Summary</a></li>
+                            </ul>
+                        </li>
                     </ul>
+                    @endif
                 </div>
+
                 <div class="col-lg-10 col-md-10 col-sm-10 print-width">
                     <div class="content">
                         <div class="visible-print text-center">
