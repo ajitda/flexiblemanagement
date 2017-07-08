@@ -71,6 +71,7 @@ Route::get('/feeds/purchases/getpurchaselist', 'FeedPurchaseController@getpurcha
 //route for expenses
 Route::resource('/expenses', 'ExpenseController');
 Route::resource('/expensecategory', 'ExpenseCategoryController');
+Route::get('/getexpense', 'ExpenseController@getExpense');
 
 
 

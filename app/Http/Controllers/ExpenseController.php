@@ -15,7 +15,6 @@ class ExpenseController extends Controller
     /**
      * Create a new controller instance.
      *
-     * @return void
      */
     public function __construct()
     {
@@ -75,6 +74,20 @@ class ExpenseController extends Controller
     public function show($id)
     {
         //
+    }
+
+    /**
+     * Displaying date wise expense list with ajax
+     *
+     */
+    public function getExpense(Request $request)
+    {
+        if($request->ajax()) {
+
+            $expenses = Expense::whereBetween('created_at', [ $request->DateCreated.' 00:00:00', $request->EndDate.' 23:59:59'])->get();
+            $user = Auth::user()->role;
+            return view('expenses.getexpenselist')->with('expenses', $expenses)->with('user', $user);
+        }
     }
 
     /**
